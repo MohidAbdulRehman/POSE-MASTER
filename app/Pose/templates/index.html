@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pose Master</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container" id="home-page">
+        <h1>Pose Master</h1>
+        
+        <!-- Capture Option Section -->
+        <div class="input-section">
+            <h2>Select Capture Mode</h2>
+            <label><input type="radio" name="capture" value="live" checked> Live Camera</label>
+        </div>
+
+        <!-- Video Upload Input (initially hidden) -->
+        <div class="input-section hidden" id="upload-input">
+            <input type="file" id="video-upload" accept="video/*">
+        </div>
+
+        <!-- Exercise Selection Section -->
+        <div class="input-section">
+            <h2>Select Exercise</h2>
+            <select id="exercise-select">
+                <option value="Selection">Select Exercise</option>
+                <option value="squat">Squat</option>
+                <option value="plank">Plank</option>
+                <option value="pushup">Pushup</option>
+                <option value="Pull up">Pull up</option>
+                <option value="Sit up">Sit up</option>
+                <option value="bicep">Bicep Curl</option>
+                <option value="Calf Raise">Calf Raise</option>
+                <option value="Jumping Jack">Jumping Jack</option>
+                <option value="Burpees">Burpees</option>
+                <option value="Wall Sit">Wall Sit</option>
+                <option value="Deadlift">Deadlift</option>
+                <option value="lunge">Lunge</option>
+                <option value="side_plank">Side Plank</option>
+            </select>
+        </div>
+
+        <!-- Start Detection Button -->
+        <div class="input-section">
+            <button id="start-detection">Start Detection</button>
+        </div>
+    </div>
+
+    <!-- Live Camera Page -->
+    <div class="container hidden" id="live-cam-page">
+        <h1 id="exercise-title">Live Camera</h1>
+        <div class="video-container">
+            <!-- Set the img src dynamically for live camera feed -->
+            <img id="live-cam" width="640" height="480">
+        </div>
+        <div class="input-section">
+            <button id="end-detection">End Detection</button>
+        </div>
+    </div>
+
+
+
+    <!-- Video Upload Display Page -->
+    <div class="container hidden" id="video-display-page">
+        <h1 id="video-exercise-title">Video Exercise</h1>
+        <video id="uploaded-video" width="640" height="480" controls></video>
+        <div class="input-section">
+            <button id="end-detection-upload">End Detection</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

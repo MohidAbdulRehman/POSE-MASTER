@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e00ff, #00c6ff);
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    width: fit-content; /* Default for other pages */
+    max-width: 90vw; /* Maximum width for smaller screens */
+}
+
+#home-page {
+    width: 600px; /* Set a fixed width for the home page */
+    max-width: none; /* Remove max-width to prevent squeezing */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+video {
+    max-width: 100%; /* Make sure video is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.input-section {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008ecf;
+}
+
+.hidden {
+    display: none;
+}
